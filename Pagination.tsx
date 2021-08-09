@@ -9,8 +9,7 @@ import NextIcon from '@static/icons/next.svg';
 
 const useStyles = makeStyles(({ palette }: Theme) => ({
   list: {
-    display: 'flex',
-    textAlign: 'center',
+    display: 'inline-flex',
     padding: '0',
     margin: '0',
   },
@@ -56,7 +55,6 @@ type PaginationPropsType = {
 export const Pagination: React.FC<PaginationPropsType> = ({ currentPage, totalItems, itemsPerPage, onChange }) => {
   const classes = useStyles();
   return (
-    <Grid justifyContent="center" alignItems="center" container>
       <ReactPagination
         totalItemsCount={totalItems}
         itemsCountPerPage={itemsPerPage}
@@ -74,6 +72,5 @@ export const Pagination: React.FC<PaginationPropsType> = ({ currentPage, totalIt
         itemClassFirst={classes.none}
         itemClassLast={classes.none}
       />
-    </Grid>
   );
 };
